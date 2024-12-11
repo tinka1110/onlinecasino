@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOLDEN GLITZ CASINO - Spel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hamburger.css">
+    <link rel="stylesheet" href="games.css"><!-- Hamburger stil -->
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger-menu">☰</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="games.html">Spel</a></li>
+            <li><a href="gallery.html">Galleri</a></li>
+            <li><a href="memory.html">Memory</a></li>
+            <li><a href="kps.html">Sten, Sax, Påse</a></li>
+        </ul>
+    </nav>
+
+    <header class="navbar">
+        <img src="GGLOGO.webp" alt="Golden Glitz Casino Logo" class="logo">
+        <h1 class="navbar-title">GOLDEN GLITZ CASINO</h1>
+    </header>
+
+    <main>
+        <!-- Innehåll som tidsgränser och teman -->
+        <section id="clock">
+            <h2>Tid och Datum</h2>
+            <div id="time"></div> 
+            <div id="date"></div> 
+        </section>
+
+        <!-- Casinostatus -->
+        <section id="status">
+            <h2 id="status"></h2> <!-- Casino öppet/stängt -->
+        </section>
+
+        <!-- Nedräkning, endast synlig lördag och söndag -->
+        <section id="countdown" style="display:none;">
+            <h2>Casino öppnar om:</h2>
+            <p id="countdown-timer"></p> <!-- Nedräkning -->
+        </section>
+
+        <!-- Speltid -->
+        <section id="game-timer">
+            <h2>Ställ in Speltid</h2>
+            <label for="playtime">Välj speltid:</label>
+            <select id="playtime">
+                <option value="120">2 h</option>
+                <option value="60">1 h</option>
+                <option value="30">30 min</option>
+                <option value="15">15 min</option>
+                <option value="5">5 min</option>
+            </select>
+            <button id="start-timer">Börja spela</button>
+            <p id="end-time"></p> <!-- Sluttid för spelet -->
+            <h3 id="timer-remaining"></h3> <!-- Återstående tid för timern -->
+        </section>
+
+        <!-- Temabyte -->
+        <section id="theme-section">
+            <h2>Byt Temafärg</h2>
+            <div>
+                <label for="theme-select">Välj bakgrundsfärg:</label>
+                <select id="theme-select">
+                    <option value="#ffffff">Vit</option>
+                    <option value="#f4cccc">Ljusrosa</option>
+                    <option value="#d9ead3">Ljusgrön</option>
+                    <option value="#cfe2f3">Ljusblå</option>
+                    <option value="#fce5cd">Beige</option>
+                </select>
+            </div>
+
+            <div class="color-picker">
+                <h3>Färgväljare</h3>
+                <label for="red-slider">Röd:</label>
+                <input id="red-slider" type="range" min="0" max="255" value="255">
+                <br>
+                <label for="green-slider">Grön:</label>
+                <input id="green-slider" type="range" min="0" max="255" value="255">
+                <br>
+                <label for="blue-slider">Blå:</label>
+                <input id="blue-slider" type="range" min="0" max="255" value="255">
+            </div>
+
+            <div>
+                <label for="text-color">Välj textfärg:</label>
+                <input type="color" id="text-color" value="#000000">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tinka K.</p>
+    </footer>
+
+    <!-- JavaScript-filer -->
+    <script src="game.js"></script>
+    <script src="theme.js"></script>
+    <script src="log.js"></script>
+    <script src="menu.js"></script>
+    <script src="isCasinoOpen.js"></script>
+    <script src="hamburger.js"></script> <!-- Hamburger funktionalitet -->
+</body>
+</html>
