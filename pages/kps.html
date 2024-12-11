@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sten, Sax, Påse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="kps.css">
+</head>
+
+<header class="navbar">
+    <img src="GGLOGO.webp" alt="Golden Glitz Casino Logo" class="logo">
+    <h1 class="navbar-title">GOLDEN GLITZ CASINO</h1>
+</header>
+
+<body>
+    <h1>Sten, Sax, Papper</h1>
+    <div id="game-container">
+        <div id="balance-container">
+            <h3>Saldo: <span id="balance">100</span></h3>
+        </div>
+        <div id="bet-container">
+            <label for="bet">Sätt in satsning (€):</label>
+            <input type="number" id="bet" min="1" max="100" value="10">
+        </div>
+        <div id="choices">
+            <!-- Knapparna skapas med JavaScript -->
+        </div>
+        <div id="results">
+            <p id="message"></p>
+        </div>
+        <div id="stats-container">
+            <h3>Resultat</h3>
+            <p>Vinster: <span id="win-count">0</span></p>
+            <p>Förluster: <span id="loss-count">0</span></p>
+            <p>Vinstprocent: <span id="win-percentage">0</span>%</p>
+        </div>
+    </div>
+    <script src="kpss.js"></script>
+    
+</body>
+</html>
