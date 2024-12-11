@@ -1,0 +1,29 @@
+/* (kps.html) */
+#choices button {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    padding: 15px 30px;
+    margin: 15px;
+    border: 2px solid #e6c300;
+    background: #b76e79;
+    color: white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#choices button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(230, 195, 0, 0.6);
+}
+
+#results {
+    margin-top: 20px;
+}
+
+#results #message {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e6c300;
+}
