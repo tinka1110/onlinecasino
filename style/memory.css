@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    gap: 20px;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    background-color: gold;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-size: 60px;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.card-image {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover::before {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.card.flipped .card-image {
+    opacity: 1;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card.flipped::before {
+    background-color: white;
+}
+
+.card:not(.flipped) .card-image {
+    opacity: 0;
+}
