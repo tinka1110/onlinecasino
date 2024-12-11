@@ -1,0 +1,57 @@
+/**
+ * Kontrollera om kasinot ska vara öppet eller stängt.
+ * Öppet: Måndag–Fredag
+ * Stängt: Lördag–Söndag
+ */
+function updateCasinoStatus() {
+    // Om det är lördag eller söndag, stäng kasinot
+    if (currentDayOfWeek === 0 || currentDayOfWeek === 6) {
+        casinoOpen = false; // Stäng kasinot
+        console.log("Casino is closed today.");
+    } else {
+        casinoOpen = true; // Öppna kasinot
+        console.log("Casino is open today!");
+    }
+}
+
+// Funktion för att åsidosätta veckodag för testning
+// Denna funktion låter utvecklare simulera helger eller vardagar.
+function setTestDay(day) {
+    // Validera att 'day' är ett giltigt värde (0–6)
+    if (day < 0 || day > 6) {
+        console.error("Invalid day.");
+        return;
+    }
+    currentDayOfWeek = day; // Åsidosätt dagens värde
+    console.log(`Test day set to ${day === 0 ? "Sunday" : day === 6 ? "Saturday" : `Day ${day}`}`);
+    updateCasinoStatus(); // Uppdatera kasinots status med testdag
+}
+
+// Kör funktionen när sidan laddas
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Checking casino status...");
+    updateCasinoStatus(); // Uppdatera kasinots status
+});
+
+// Kommentera bort denna rad för produktion.
+//setTestDay(4);
+
+/**
+ * Kasino status - Hur fungerar det?
+ * 
+ * - Kasinot är öppet måndag till fredag och stängt på lördagar och söndagar.
+ * - Funktionen `updateCasinoStatus` kontrollerar vilken veckodag det är genom variabeln `currentDayOfWeek`.
+ *   - `currentDayOfWeek` har värden mellan 0–6, där 0 är söndag och 6 är lördag.
+ *   - Om det är lördag (6) eller söndag (0) stängs kasinot automatiskt.
+ *   - Om det är en vardag (1–5) öppnas kasinot.
+ * 
+ * Testfunktion:
+ * - För att kunna utveckla och testa koden på helger (när kasinot är stängt)
+ *   kan man använda funktionen `setTestDay(day)`.
+ * - Denna funktion låter dig simulera vilken veckodag som helst genom att ange ett värde mellan 0–6.
+ * - Till exempel, `setTestDay(6)` simulerar en lördag och stänger kasinot, 
+ *   medan `setTestDay(3)` simulerar en onsdag och öppnar kasinot.
+ * 
+ * Viktigt:
+ * - Ta bort `setTestDay`-anropet innan du publicerar koden
+ */
