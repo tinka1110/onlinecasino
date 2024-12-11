@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOLDEN GLITZ CASINO</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="navbar">
+        <img src="GGLOGO.webp" alt="Golden Glitz Casino Logo" class="logo">
+        <h1 class="navbar-title">GOLDEN GLITZ CASINO</h1>
+    </header>
+
+    <main>
+        <!-- Registreringssektion -->
+        <section id="registrerings-sektion">
+            <h2>Registrera dig</h2>
+            <form id="registreringsForm">
+                <label for="förnamn">Förnamn:</label>
+                <input type="text" id="förnamn" placeholder="Ange ditt förnamn" required>
+                
+                <label for="efternamn">Efternamn:</label>
+                <input type="text" id="efternamn" placeholder="Ange ditt efternamn" required>
+                
+                <button type="submit">Registrera</button>
+            </form>
+            <p id="välkomstMeddelande"></p>
+        </section>
+
+        <!-- Ålder och insats -->
+        <section id="spelinformation-sektion" style="display: none;">
+            <h2>Ange din spelinformation</h2>
+            <form id="spelinformationForm">
+                <label for="ålder">Ålder:</label>
+                <input type="number" id="ålder" placeholder="Ange din ålder" required>
+                
+                <label for="insats">Insats:</label>
+                <input type="text" id="insats" placeholder="Ange insats" required>
+                
+                <button type="submit">Spara information</button>
+            </form>
+        </section>
+
+        <!-- Gå till spel button (Initially hidden) -->
+        <section id="spel-sektion" style="display: none;">
+            <button id="gåTillSpelBtn">Gå till spel</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tinka K.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+
