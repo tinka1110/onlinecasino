@@ -55,3 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
  * Viktigt:
  * - Ta bort `setTestDay`-anropet innan du publicerar koden
  */
+
+//Jag lyckades inte få det att fungera så att sidan eller spelen inte skulle fungera alls 
+//under helgen
+//, utan bara att startsidan har en nedräkning och att det står att den är stängd.
